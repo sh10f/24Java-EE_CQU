@@ -1,0 +1,138 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel_East"
+				"preferredSize": new java.awt.Dimension( 80, 10 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "East"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel_South"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel_Nort"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "物流系统客户注册"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"foreground": new java.awt.Color( 46, 155, 243, 255 )
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 12, false )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel_Center"
+				"background": sfield java.awt.Color white
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_UName"
+					"text": "用户名："
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 8, false )
+					"foreground": new java.awt.Color( 46, 155, 243, 255 )
+					"background": new java.awt.Color( 46, 155, 243, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 100
+					"y": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_PW"
+					"text": "密码："
+					"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 1, 8, false )
+					"foreground": &Color0 new java.awt.Color( 46, 155, 243, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 100
+					"y": 100
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_Phone"
+					"text": "手机号："
+					"foreground": new java.awt.Color( 46, 155, 243, 255 )
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 8, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 100
+					"y": 285
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_Uname"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 165
+					"y": 60
+					"width": 290
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_PW"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 165
+					"y": 135
+					"width": 290
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_Phone"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 165
+					"y": 325
+					"width": 290
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_Login"
+					"text": "去登录"
+					"foreground": new java.awt.Color( 46, 155, 243, 255 )
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 4, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 245
+					"y": 365
+					"width": 80
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_Register"
+					"text": "注册"
+					"foreground": new java.awt.Color( 46, 155, 243, 255 )
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 5, false )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 100
+					"y": 395
+					"width": 360
+					"height": 55
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_NPW"
+					"text": "确认密码："
+					"font": #SwingDerivedFont0
+					"foreground": #Color0
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 105
+					"height": 27
+					"x": 100
+					"y": 195
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_NPW"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 290
+					"height": 35
+					"x": 165
+					"y": 240
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 55, 0 )
+			"size": new java.awt.Dimension( 540, 540 )
+		} )
+	}
+}

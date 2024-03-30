@@ -1,0 +1,150 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel_South"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"preferredSize": new java.awt.Dimension( 10, 50 )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel_East"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"preferredSize": new java.awt.Dimension( 50, 10 )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "East"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel_Center"
+				"minimumSize": new java.awt.Dimension( 500, 400 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_Rememer"
+					"text": "记住密码"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 140
+					"y": 240
+					"width": 85
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_User"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 200
+					"y": 95
+					"width": 180
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_Login"
+					"text": "登录"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 105
+					"y": 270
+					"width": 155
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordField1"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 200
+					"y": 150
+					"width": 180
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_User"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					"icon": new com.jformdesigner.model.SwingIcon( 1, "D:\\CodeField\\Code_Java\\Project\\imgs\\Mainview\\User.png" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 125
+					"y": 100
+					"width": 75
+					"height": 22
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_PassWord"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					"icon": new com.jformdesigner.model.SwingIcon( 1, "D:\\CodeField\\Code_Java\\Project\\imgs\\Mainview\\Password.png" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 125
+					"y": 150
+					"width": 90
+					"height": 22
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_Forget"
+					"text": "忘记密码"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 290
+					"y": 235
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_Register"
+					"text": "注册"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 285
+					"y": 270
+					"width": 98
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_Class"
+					"text": "Class"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 130
+					"y": 200
+					"width": 75
+					"height": 25
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox_Class"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 200
+					"y": 195
+					"width": 175
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel_North"
+				"preferredSize": new java.awt.Dimension( 10, 50 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_System"
+					"text": "物流管理系统"
+					"font": new java.awt.Font( "黑体", 1, 25 )
+					"foreground": new java.awt.Color( 79, 142, 211, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 315
+					"y": 15
+					"width": 180
+					"height": 30
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label_Left"
+				"preferredSize": new java.awt.Dimension( 350, 17 )
+				"icon": new com.jformdesigner.model.SwingIcon( 1, "D:\\CodeField\\Code_Java\\Project\\imgs\\Mainview\\Left.png" )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 60, 25 )
+			"size": new java.awt.Dimension( 840, 495 )
+		} )
+	}
+}
