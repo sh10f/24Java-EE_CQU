@@ -13,7 +13,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import javax.sound.sampled.Control;
 import javax.swing.*;
 
 /**
@@ -43,7 +42,7 @@ public class MainView extends JFrame {
         panel_South = new JPanel();
         panel_East = new JPanel();
         panel_Center = new JPanel();
-        checkBox_Rememer = new JCheckBox();
+        button_unsubscrible = new JButton();
         textField_User = new JTextField();
         button_Login = new JButton();
         passwordField1 = new JPasswordField();
@@ -90,10 +89,10 @@ public class MainView extends JFrame {
 
 
             //---- checkBox_Rememer ----
-            checkBox_Rememer.setText("\u8bb0\u4f4f\u5bc6\u7801");
-            checkBox_Rememer.setBackground(Color.white);
-            panel_Center.add(checkBox_Rememer);
-            checkBox_Rememer.setBounds(140, 240, 85, 30);
+            button_unsubscrible.setText("账户注销");
+            button_unsubscrible.setBackground(Color.white);
+            panel_Center.add(button_unsubscrible);
+            button_unsubscrible.setBounds(140, 235, 85, 25);
             panel_Center.add(textField_User);
             textField_User.setBounds(200, 95, 180, 35);
 
@@ -197,6 +196,7 @@ public class MainView extends JFrame {
         button_Login.addActionListener(actionCon);
         button_Forget.addActionListener(actionCon);
         button_Register.addActionListener(actionCon);
+        button_unsubscrible.addActionListener(actionCon);
 
 
     }
@@ -205,7 +205,7 @@ public class MainView extends JFrame {
     public JPanel panel_South;
     public JPanel panel_East;
     public JPanel panel_Center;
-    public JCheckBox checkBox_Rememer;
+    public JButton button_unsubscrible;
     public JTextField textField_User;
     public JButton button_Login;
     public JPasswordField passwordField1;
@@ -261,7 +261,7 @@ public class MainView extends JFrame {
                     }
 
                     else
-                        System.out.println("eoor");
+                        JOptionPane.showMessageDialog(panel_Center,"密码与id无法对应！\n请您检查id和密码是否正确。","输入提示",JOptionPane.WARNING_MESSAGE);
                 }
             }
 
@@ -290,6 +290,25 @@ public class MainView extends JFrame {
                         setVisible(true);
                     }
                 });
+            }
+
+            else if(e.getSource() == button_unsubscrible){
+                user.setUClass((String) comboBox_Class.getSelectedItem());
+                if(!user.getUClass().equals("客户"))
+                    JOptionPane.showMessageDialog(panel_Center, "该类型用户请联系管理员进行注销。", "注销提醒",
+                            JOptionPane.WARNING_MESSAGE);
+                else {
+                    UnsubscribeView unsubscribeView = new UnsubscribeView();
+                    setVisible(false);
+
+                    unsubscribeView.addWindowListener(new WindowAdapter() {
+                        @Override
+                        public void windowClosed(WindowEvent e) {
+                            super.windowClosed(e);
+                            setVisible(true);
+                        }
+                    });
+                }
             }
 
         }

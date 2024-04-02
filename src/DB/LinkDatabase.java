@@ -1,6 +1,7 @@
 package DB;
 
 import javax.swing.table.DefaultTableModel;
+import java.awt.print.Printable;
 import java.sql.*;
 
 public class LinkDatabase {
@@ -21,6 +22,8 @@ public class LinkDatabase {
         Class.forName(driverName);
         conn = DriverManager.getConnection(dbURL, userName, userPwd);
     }
+
+
 
     public static boolean DB_Login(int uid, String uPassWord, String uClass) throws Exception
     {
@@ -53,6 +56,34 @@ public class LinkDatabase {
 
     public static void endDBConnect() throws SQLException {
         conn.close();
+    }
+
+    public static int deleteUser(int uid) throws SQLException{
+        boolean result;
+        String sql;
+        try {
+            conn.setAutoCommit(false);
+            Statement st = conn.createStatement();
+            String sql_express = "DELETE FROM expressorder WHERE EOid IN " +
+                    "(SELECT EOid FROM userorder WHERE Uid = " + uid + ")";
+
+            int count = st.executeUpdate(sql_express);
+
+            sql = "DELETE FROM user WHERE Uid = " + uid;
+            count = st.executeUpdate(sql);
+
+            conn.commit();
+            conn.setAutoCommit(true);
+
+            return count;
+        } catch (SQLException e) {
+            System.out.println(e);
+            try {
+                conn.rollback();
+            } catch (SQLException exp) { }
+        }
+
+        return -1;
     }
 
     // ======= updatePW ======
